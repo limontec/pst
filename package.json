@@ -1,0 +1,23 @@
+{
+    "name": "pst",
+    "version": "2.0.0",
+    "description": "Pix Scam Tracker",
+    "main": "index.html",
+    "type": "module",
+    "scripts": {
+        "dev": "vercel dev",
+        "deploy": "vercel --prod"
+    },
+    "dependencies": {
+        "dropbox": "^10.34.0"
+    },
+    "devDependencies": {
+        "vercel": "^33.0.0"
+    },
+    "keywords": [
+        "pix",
+        "scam",
+        "tracker"
+    ],
+    "license": "MIT"
+}
