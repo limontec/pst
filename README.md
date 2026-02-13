@@ -37,9 +37,9 @@ DROPBOX_REFRESH_TOKEN=seu_refresh_token
 NODE_ENV=production
 ```
 
-### 4. Conecte seu repositório GitHub diretamente na Vercel.
+### 4. Importe seu repositório GitHub diretamente na Vercel.
 
-**Importante:** Configure as variáveis de ambiente na Vercel:
+**Importante:** Deixe as configurações de projeto padrão e importe as variáveis de ambiente na Vercel:
 - Settings → Environment Variables
 - Importe o arquivo `.env.local`
 - Realize o deploy
@@ -119,5 +119,6 @@ MIT License - Veja o arquivo LICENSE para detalhes.
 O uso deste sistema é de **total responsabilidade de quem realizar deploy**. Não nos responsabilizamos pelos seus atos.
 
 ---
+
 
 **Desenvolvido para fins educacionais**
