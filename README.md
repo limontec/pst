@@ -9,7 +9,7 @@ Aplicação web que gera um comprovante de pagamento simulado após obter permis
 
 ## Configuração
 
-### 1. Configurar Dropbox
+### 1. Clonar projeto
 
 1. Faça o fork deste repositório.
 2. Renomeie o repositório (o nome será usado pelo Vercel para gerar a URL).
@@ -122,3 +122,4 @@ O uso deste sistema é de **total responsabilidade de quem realizar deploy**. N�
 
 
 **Desenvolvido para fins educacionais**
+
